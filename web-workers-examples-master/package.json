@@ -1,0 +1,16 @@
+{
+  "name": "webworker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lodash": "http-server lodash",
+    "sorter": "http-server sorter",
+    "shared": "http-server shared"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}

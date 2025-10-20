@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate</title>
+</head>
+<body>
+    <h4>从1到给定数值的求和</h4>
+    输入数值: <input type="text" id="num" />
+    计算结果: <div id="result"></div>
+    <button onclick="calculate()">计算</button>
+
+    <script type="text/javascript">
+      function calculate() {
+        const $num = document.getElementById('num');
+        const $result = document.getElementById('result');
+        const num = parseInt($num.value, 10);
+        let result = 0;
+        console.time()
+        // 循环计算求和
+        for (let i = 0; i <= num; i++) {
+          result += i;
+        }
+        console.log(`计算: ${num} 累加值时间`)
+        console.timeEnd();
+        $result.innerHTML = result;
+      }
+    </script>
+</body>
+</html>

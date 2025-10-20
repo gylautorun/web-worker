@@ -1,0 +1,43 @@
+ul li {
+    float: left;
+    list-style: none;
+    margin-top: 10px;
+    width: 100%;
+}
+
+ul li > span {
+    font-size: 10px;
+    transform: scale(0.8);
+    display: block;
+    width: 17%;
+}
+
+ul li > p {
+    background: rgb(140, 222, 247);
+    border-radius: 4px;
+    padding: 4px;
+    margin: 0;
+    display: inline-block;
+}
+
+ul li.right {
+    float: right;
+    text-align: right;
+}
+
+ul li.right > p {
+    background: rgb(132, 226, 140);
+}
+
+ul li.right > span {
+    width: 110%;
+}
+
+#chatList {
+    width: 300px;
+    background: #fff;
+    height: 400px;
+    padding: 10px;
+    border: 4px solid #de8888;
+    border-radius: 10px;
+}

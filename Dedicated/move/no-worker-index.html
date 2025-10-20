@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Move</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div class="shuttle red" id="shuttle-1"></div>
+  <div class="shuttle blue" id="shuttle-2"></div>
+  <div class="shuttle green" id="shuttle-3"></div>
+  <div>
+    <button id="start" onclick="startAnimation()">Start Animation</button>
+    <button id="calculate" onclick="runCalculation()">Run Calculation</button>
+  </div>
+</body>
+<script>
+    function prime(num) {
+        for (let i = 0; i <= num; i++) {
+            let flag = 0;
+          
+            // 从 2 开始循环到用户输入的数字
+            for (let j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    flag = 1;
+                    break;
+                }
+            }
+          
+            // 如果 number 大于 1 且不能被其他数字整除
+            if (i > 1 && flag == 0) {
+                console.log(i);
+            }
+        }
+    };
+      
+    function runCalculation() {
+        const num = 50000;
+        console.log(prime(num));
+        return prime(num);
+    };
+      
+    function startAnimation() {
+        for (let i = 0; i < 3; i++) {
+            const shuttleID = `shuttle-${i + 1}`;
+            const $shuttle = document.getElementById(shuttleID);
+            let position = 0;
+            setInterval(() => {
+                if (position > window.innerWidth / 1.2) {
+                  position = 0;
+                } else {
+                  position++;
+                  $shuttle.style.left = position + 'px';
+                }
+            }, 1);
+        }
+    };
+</script>
+
+</html>
